@@ -9,7 +9,7 @@
             --bg-color: #f8fafc;
             --card-bg: #ffffff;
             --card-border: #e2e8f0;
-            --accent-color: #2563eb; /* Professional Blue */
+            --accent-color: #2563eb;
             --accent-hover: #1d4ed8;
             --text-main: #0f172a;
             --text-muted: #64748b;
@@ -27,13 +27,14 @@
             background-color: var(--bg-color);
             color: var(--text-main);
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.5rem 5%;
+            padding: 1rem 5%;
             border-bottom: 1px solid var(--card-border);
             position: sticky;
             top: 0;
@@ -43,9 +44,9 @@
         }
 
         .logo {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 800;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.08em;
             color: #0f172a;
             text-decoration: none;
             text-transform: uppercase;
@@ -55,11 +56,15 @@
             color: var(--accent-color);
         }
 
+        nav {
+            display: flex;
+            gap: 1rem;
+        }
+
         nav a {
             color: var(--text-muted);
             text-decoration: none;
-            margin-left: 2rem;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             font-weight: 600;
             transition: color 0.2s;
         }
@@ -70,7 +75,7 @@
 
         .hero {
             text-align: center;
-            padding: 7rem 1rem 5rem 1rem;
+            padding: 5rem 1.25rem 3.5rem 1.25rem;
             max-width: 900px;
             margin: 0 auto;
         }
@@ -79,21 +84,21 @@
             display: inline-block;
             background-color: var(--badge-bg);
             color: var(--accent-hover);
-            padding: 0.5rem 1.2rem;
+            padding: 0.4rem 1rem;
             border-radius: 50px;
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             font-weight: 700;
-            letter-spacing: 0.05em;
-            margin-bottom: 2rem;
+            letter-spacing: 0.03em;
+            margin-bottom: 1.5rem;
             border: 1px solid rgba(37, 99, 235, 0.2);
         }
 
         .hero h1 {
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-size: clamp(2.2rem, 5vw, 4rem);
             font-weight: 800;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
             letter-spacing: -0.02em;
-            line-height: 1.1;
+            line-height: 1.15;
         }
 
         .hero h1 span {
@@ -102,9 +107,9 @@
 
         .hero p {
             color: var(--text-muted);
-            font-size: 1.2rem;
-            margin-bottom: 3rem;
-            max-width: 700px;
+            font-size: 1.05rem;
+            margin-bottom: 2.5rem;
+            max-width: 650px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -112,7 +117,7 @@
         .btn {
             background-color: var(--accent-color);
             color: #ffffff;
-            padding: 1rem 2.5rem;
+            padding: 0.9rem 2rem;
             border-radius: 8px;
             font-weight: 700;
             text-decoration: none;
@@ -131,22 +136,22 @@
             background-color: var(--card-bg);
             border-top: 1px solid var(--card-border);
             border-bottom: 1px solid var(--card-border);
-            padding: 6rem 5%;
+            padding: 4.5rem 5%;
         }
 
         .about-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 4rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
             max-width: 1200px;
             margin: 0 auto;
             align-items: center;
         }
 
         .about-content h2 {
-            font-size: 2.3rem;
+            font-size: 2rem;
             font-weight: 800;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
             letter-spacing: -0.02em;
         }
 
@@ -156,72 +161,75 @@
 
         .about-content p {
             color: var(--text-muted);
-            font-size: 1.05rem;
-            margin-bottom: 1.2rem;
-            line-height: 1.7;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            line-height: 1.6;
         }
 
         .about-highlights {
             display: flex;
             flex-direction: column;
-            gap: 1.5rem;
+            gap: 1.2rem;
         }
 
         .highlight-card {
             background-color: var(--bg-color);
             border: 1px solid var(--card-border);
-            padding: 1.8rem;
+            padding: 1.5rem;
             border-radius: 10px;
         }
 
         .highlight-card h3 {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             font-weight: 700;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
             color: var(--text-main);
         }
 
         .highlight-card p {
             color: var(--text-muted);
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             margin: 0;
         }
 
         .section {
-            padding: 6rem 5%;
+            padding: 4.5rem 5%;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .section-header {
             text-align: center;
-            margin-bottom: 4rem;
+            margin-bottom: 3.5rem;
         }
 
         .section-header h2 {
-            font-size: 2.5rem;
+            font-size: 2.1rem;
             font-weight: 800;
             letter-spacing: -0.02em;
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
         }
 
         .section-header p {
             color: var(--text-muted);
-            font-size: 1.1rem;
+            font-size: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         .grid-3 {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
         }
 
         .card {
             background-color: var(--card-bg);
             border: 1px solid var(--card-border);
-            padding: 3rem 2.5rem;
+            padding: 2.5rem 2rem;
             border-radius: 12px;
             position: relative;
+            margin-top: 1rem; /* Space for badges */
             transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
@@ -242,7 +250,7 @@
         .card.featured::before {
             content: 'MOST POPULAR';
             position: absolute;
-            top: -12px;
+            top: -14px;
             left: 50%;
             transform: translateX(-50%);
             background-color: var(--accent-color);
@@ -252,54 +260,55 @@
             padding: 0.3rem 0.9rem;
             border-radius: 20px;
             letter-spacing: 0.05em;
+            white-space: nowrap;
         }
 
         .contract-tag {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: 700;
             color: var(--accent-hover);
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
         }
 
         .plan-title {
-            font-size: 1.5rem;
+            font-size: 1.35rem;
             font-weight: 800;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
         }
 
         .plan-price {
-            font-size: 2.3rem;
+            font-size: 2.1rem;
             font-weight: 800;
             color: var(--text-main);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
         }
 
         .plan-price span {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: var(--text-muted);
             font-weight: normal;
         }
 
         .card p {
             color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
         }
 
         .features-list {
             list-style: none;
-            margin-bottom: 2.5rem;
+            margin-bottom: 2rem;
             flex: 1;
         }
 
         .features-list li {
             color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 0.9rem;
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
         }
 
         .features-list li::before {
@@ -307,6 +316,7 @@
             color: var(--accent-color);
             font-weight: bold;
             margin-right: 0.75rem;
+            flex-shrink: 0;
         }
 
         .btn-card {
@@ -314,7 +324,7 @@
             color: var(--text-main);
             border: 1px solid var(--card-border);
             text-align: center;
-            padding: 0.85rem;
+            padding: 0.8rem;
             border-radius: 6px;
             font-weight: 700;
             text-decoration: none;
@@ -331,7 +341,7 @@
             background-color: var(--card-bg);
             border: 1px solid var(--card-border);
             border-radius: 12px;
-            padding: 5rem 2rem;
+            padding: 4rem 1.5rem;
             text-align: center;
             max-width: 800px;
             margin: 0 auto;
@@ -340,10 +350,20 @@
 
         footer {
             text-align: center;
-            padding: 3rem;
+            padding: 2.5rem 1.5rem;
             color: var(--text-muted);
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             border-top: 1px solid var(--card-border);
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                gap: 0.75rem;
+            }
+            nav a {
+                font-size: 0.75rem;
+                margin-left: 0;
+            }
         }
     </style>
 </head>
@@ -352,9 +372,9 @@
     <header>
         <a href="#" class="logo">Rapture <span>Media</span></a>
         <nav>
-            <a href="#about">About Us</a>
-            <a href="#contracts">Contracts & Plans</a>
-            <a href="#contact">Get in Touch</a>
+            <a href="#about">About</a>
+            <a href="#contracts">Plans</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
@@ -437,13 +457,13 @@
         </div>
     </section>
 
-    <section class="section" id="contact">
+    <section class="section" id="contact" style="padding-top: 0;">
         <div class="support-box">
             <div class="section-header" style="margin-bottom: 1.5rem;">
                 <h2>Let's Grow Together</h2>
-                <p style="color: var(--text-main); font-size: 1.15rem; font-weight: 600; margin-top: 0.5rem;">"We specialise in making your business better."</p>
+                <p style="color: var(--text-main); font-size: 1.1rem; font-weight: 600; margin-top: 0.5rem;">"We specialise in making your business better."</p>
             </div>
-            <p style="color: var(--text-muted); margin-bottom: 2rem; max-width: 550px; margin-left: auto; margin-right: auto;">Have questions about our web or social media services, or ready to discuss how we can help your business reach its goals? Reach out today.</p>
+            <p style="color: var(--text-muted); margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto; font-size: 0.95rem;">Have questions about our web or social media services, or ready to discuss how we can help your business reach its goals? Reach out today.</p>
             <a href="mailto:contact@rapturemediagroup.site" class="btn">Email Our Team</a>
         </div>
     </section>
