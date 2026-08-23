@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rapture Media Group | Making Your Business Better</title>
+    <title>Rapture Media Group | Helping Your Business Grow & Succeed</title>
     <style>
         :root {
-            --bg-color: #050505;
-            --card-bg: #111111;
-            --card-border: #222222;
-            --accent-color: #facc15; /* Cardone Gold/Yellow */
-            --accent-hover: #eab308;
-            --text-main: #ffffff;
-            --text-muted: #a3a3a3;
-            --badge-bg: rgba(250, 204, 21, 0.1);
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --card-border: #e2e8f0;
+            --accent-color: #10b981; /* Vibrant Growth Green */
+            --accent-hover: #059669;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --badge-bg: rgba(16, 185, 129, 0.1);
         }
 
         * {
@@ -26,7 +26,7 @@
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
-            line-height: 1.5;
+            line-height: 1.6;
         }
 
         header {
@@ -37,18 +37,22 @@
             border-bottom: 1px solid var(--card-border);
             position: sticky;
             top: 0;
-            background-color: rgba(5, 5, 5, 0.95);
+            background-color: rgba(248, 250, 252, 0.95);
             backdrop-filter: blur(10px);
             z-index: 100;
         }
 
         .logo {
-            font-size: 1.25rem;
-            font-weight: 900;
-            letter-spacing: 0.15em;
-            color: var(--accent-color);
+            font-size: 1.2rem;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            color: #0f172a;
             text-decoration: none;
             text-transform: uppercase;
+        }
+
+        .logo span {
+            color: var(--accent-color);
         }
 
         nav a {
@@ -56,9 +60,7 @@
             text-decoration: none;
             margin-left: 2rem;
             font-size: 0.9rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
+            font-weight: 600;
             transition: color 0.2s;
         }
 
@@ -68,32 +70,30 @@
 
         .hero {
             text-align: center;
-            padding: 8rem 1rem 5rem 1rem;
-            max-width: 950px;
+            padding: 7rem 1rem 5rem 1rem;
+            max-width: 900px;
             margin: 0 auto;
         }
 
         .badge {
             display: inline-block;
             background-color: var(--badge-bg);
-            color: var(--accent-color);
+            color: var(--accent-hover);
             padding: 0.5rem 1.2rem;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-weight: 900;
-            letter-spacing: 0.15em;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
             margin-bottom: 2rem;
-            border: 1px solid rgba(250, 204, 21, 0.3);
-            text-transform: uppercase;
+            border: 1px solid rgba(16, 185, 129, 0.2);
         }
 
         .hero h1 {
-            font-size: clamp(2.8rem, 7vw, 5.5rem);
-            font-weight: 900;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 800;
             margin-bottom: 1.5rem;
-            letter-spacing: -0.03em;
-            line-height: 1.05;
-            text-transform: uppercase;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
         }
 
         .hero h1 span {
@@ -102,37 +102,29 @@
 
         .hero p {
             color: var(--text-muted);
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             margin-bottom: 3rem;
-            max-width: 750px;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
         }
 
         .btn {
             background-color: var(--accent-color);
-            color: #000;
-            padding: 1rem 2.8rem;
-            border-radius: 4px;
-            font-weight: 900;
+            color: #ffffff;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            font-weight: 700;
             text-decoration: none;
             display: inline-block;
             transition: all 0.2s ease;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            box-shadow: 0 0 30px rgba(250, 204, 21, 0.2);
+            box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
         }
 
         .btn:hover {
             background-color: var(--accent-hover);
             transform: translateY(-2px);
-            box-shadow: 0 0 40px rgba(250, 204, 21, 0.4);
-        }
-
-        .section {
-            padding: 6rem 5%;
-            max-width: 1200px;
-            margin: 0 auto;
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
         }
 
         .about-section {
@@ -145,16 +137,15 @@
         .about-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
+            gap: 4rem;
             max-width: 1200px;
             margin: 0 auto;
             align-items: center;
         }
 
         .about-content h2 {
-            font-size: 2.5rem;
-            font-weight: 900;
-            text-transform: uppercase;
+            font-size: 2.3rem;
+            font-weight: 800;
             margin-bottom: 1.5rem;
             letter-spacing: -0.02em;
         }
@@ -166,37 +157,40 @@
         .about-content p {
             color: var(--text-muted);
             font-size: 1.05rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
             line-height: 1.7;
         }
 
-        .about-stats {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+        .about-highlights {
+            display: flex;
+            flex-direction: column;
             gap: 1.5rem;
         }
 
-        .stat-box {
+        .highlight-card {
             background-color: var(--bg-color);
             border: 1px solid var(--card-border);
-            padding: 2rem;
-            border-radius: 6px;
-            text-align: center;
+            padding: 1.8rem;
+            border-radius: 10px;
         }
 
-        .stat-num {
-            font-size: 2.5rem;
-            font-weight: 900;
-            color: var(--accent-color);
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--text-muted);
+        .highlight-card h3 {
+            font-size: 1.1rem;
             font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+
+        .highlight-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .section {
+            padding: 6rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .section-header {
@@ -205,11 +199,10 @@
         }
 
         .section-header h2 {
-            font-size: 2.8rem;
-            font-weight: 900;
+            font-size: 2.5rem;
+            font-weight: 800;
             letter-spacing: -0.02em;
             margin-bottom: 1rem;
-            text-transform: uppercase;
         }
 
         .section-header p {
@@ -226,59 +219,60 @@
         .card {
             background-color: var(--card-bg);
             border: 1px solid var(--card-border);
-            padding: 3.5rem 2.5rem;
-            border-radius: 8px;
+            padding: 3rem 2.5rem;
+            border-radius: 12px;
             position: relative;
             transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
         }
 
         .card:hover {
             border-color: var(--accent-color);
-            transform: translateY(-5px);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
         }
 
         .card.featured {
             border-color: var(--accent-color);
-            background: linear-gradient(180deg, #18160b 0%, var(--card-bg) 100%);
+            box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.15);
         }
 
         .card.featured::before {
-            content: 'HIGH DEMAND CONTRACT';
+            content: 'MOST POPULAR';
             position: absolute;
-            top: -14px;
+            top: -12px;
             left: 50%;
             transform: translateX(-50%);
             background-color: var(--accent-color);
-            color: #000;
+            color: #ffffff;
             font-size: 0.7rem;
-            font-weight: 900;
-            padding: 0.3rem 1rem;
-            border-radius: 4px;
-            letter-spacing: 0.1em;
+            font-weight: 800;
+            padding: 0.3rem 0.9rem;
+            border-radius: 20px;
+            letter-spacing: 0.05em;
         }
 
         .contract-tag {
             font-size: 0.8rem;
-            font-weight: 800;
-            color: var(--accent-color);
+            font-weight: 700;
+            color: var(--accent-hover);
             text-transform: uppercase;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.05em;
             margin-bottom: 0.5rem;
         }
 
         .plan-title {
-            font-size: 1.6rem;
-            font-weight: 900;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
         }
 
         .plan-price {
-            font-size: 2.5rem;
-            font-weight: 900;
-            color: var(--accent-color);
+            font-size: 2.3rem;
+            font-weight: 800;
+            color: var(--text-main);
             margin-bottom: 1.5rem;
         }
 
@@ -309,40 +303,39 @@
         }
 
         .features-list li::before {
-            content: '⚡';
-            font-size: 0.8rem;
+            content: '✓';
+            color: var(--accent-color);
+            font-weight: bold;
             margin-right: 0.75rem;
         }
 
         .btn-card {
-            background-color: transparent;
+            background-color: var(--bg-color);
             color: var(--text-main);
-            border: 2px solid var(--card-border);
+            border: 1px solid var(--card-border);
             text-align: center;
-            padding: 0.9rem;
-            border-radius: 4px;
-            font-weight: 800;
+            padding: 0.85rem;
+            border-radius: 6px;
+            font-weight: 700;
             text-decoration: none;
             transition: all 0.2s;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            letter-spacing: 0.05em;
         }
 
         .card:hover .btn-card, .card.featured .btn-card {
             background-color: var(--accent-color);
-            color: #000;
+            color: #ffffff;
             border-color: var(--accent-color);
         }
 
-        .execution-box {
+        .support-box {
             background-color: var(--card-bg);
             border: 1px solid var(--card-border);
-            border-radius: 8px;
+            border-radius: 12px;
             padding: 5rem 2rem;
             text-align: center;
             max-width: 800px;
             margin: 0 auto;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
         }
 
         footer {
@@ -351,44 +344,42 @@
             color: var(--text-muted);
             font-size: 0.85rem;
             border-top: 1px solid var(--card-border);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <a href="#" class="logo">Rapture Media Group</a>
+        <a href="#" class="logo">Rapture <span>Media</span></a>
         <nav>
-            <a href="#about">About</a>
-            <a href="#contracts">Contracts</a>
-            <a href="#contact">Close Deal</a>
+            <a href="#about">About Us</a>
+            <a href="#contracts">Contracts & Plans</a>
+            <a href="#contact">Get in Touch</a>
         </nav>
     </header>
 
     <section class="hero">
-        <div class="badge">No Excuses. Pure Execution.</div>
-        <h1>WE SPECIALISE IN MAKING <br><span>YOUR BUSINESS BETTER.</span></h1>
-        <p>We don’t do slow timelines or empty promises. We lock in binding contracts, scale your operations, and engineer your business to dominate its market.</p>
-        <a href="#contracts" class="btn">View Binding Contracts</a>
+        <div class="badge">Dedicated Business Growth Partner</div>
+        <h1>We Specialise in Making <br><span>Your Business Better</span></h1>
+        <p>Clear, straightforward digital solutions and transparent service agreements designed to help local businesses grow, attract more clients, and thrive.</p>
+        <a href="#contracts" class="btn">View Service Contracts</a>
     </section>
 
     <section class="about-section" id="about">
         <div class="about-grid">
             <div class="about-content">
-                <h2>About <span>Rapture Media Group</span></h2>
-                <p>We aren't a traditional agency that hides behind fluff and endless meetings. We operate with absolute clarity, speed, and aggression because we believe that revenue solves 95% of business problems.</p>
-                <p>Our entire core mission is built around one undeniable standard: <strong>we specialise in making your business better</strong>. Whether through rapid digital architecture, strict retainer contracts, or high-conversion layouts, we lock in to ensure your operation out-executes the competition.</p>
+                <h2>Committed to Your <span>Long-Term Success</span></h2>
+                <p>At Rapture Media Group, our core mission is simple: we specialise in making your business better. We know that running a business takes hard work, and dealing with confusing tech or poor marketing shouldn't hold you back.</p>
+                <p>We work side-by-side with you to build clean, professional web setups and reliable growth strategies so you can focus on serving your customers and expanding your impact.</p>
             </div>
-            <div class="about-stats">
-                <div class="stat-box">
-                    <div class="stat-num">100%</div>
-                    <div class="stat-label">Execution Focus</div>
+            <div class="about-highlights">
+                <div class="highlight-card">
+                    <h3>Clear & Honest Communication</h3>
+                    <p>No jargon or hidden surprises—just straightforward guidance and dependable execution.</p>
                 </div>
-                <div class="stat-box">
-                    <div class="stat-num">24/7</div>
-                    <div class="stat-label">Market Drive</div>
+                <div class="highlight-card">
+                    <h3>Built for Real Growth</h3>
+                    <p>Every layout and agreement is structured specifically to improve your visibility and help your business succeed.</p>
                 </div>
             </div>
         </div>
@@ -396,69 +387,69 @@
 
     <section class="section" id="contracts">
         <div class="section-header">
-            <h2>Binding Service Contracts</h2>
-            <p>Pick your tier. Sign the agreement. Watch your business scale.</p>
+            <h2>Service & Partnership Contracts</h2>
+            <p>Transparent plans designed to support your growth every step of the way.</p>
         </div>
 
         <div class="grid-3">
             <div class="card">
-                <div class="contract-tag">Agreement 01</div>
-                <div class="plan-title">The Market Entry Build</div>
+                <div class="contract-tag">Starter Agreement</div>
+                <div class="plan-title">Business Foundation</div>
                 <div class="plan-price">$1,500 <span>/ upfront</span></div>
-                <p>A fast-turnaround contract designed to overhaul your digital presence and make your business better from day one.</p>
+                <p>Perfect for establishing a clean, professional online presence that instantly improves how customers see your business.</p>
                 <ul class="features-list">
-                    <li>Immediate 14-Day Delivery Guarantee</li>
-                    <li>High-Conversion Web Architecture</li>
-                    <li>Targeted Local SEO Enhancement</li>
-                    <li>Direct-Response Brand Messaging</li>
+                    <li>Custom Professional Website Build</li>
+                    <li>Mobile-Friendly Layout</li>
+                    <li>Local SEO Foundations</li>
+                    <li>Dedicated Support & Handover</li>
                 </ul>
-                <a href="mailto:contact@rapturemediagroup.site?subject=Contract%20Inquiry:%20Market%20Entry" class="btn-card">Lock In Contract</a>
+                <a href="mailto:contact@rapturemediagroup.site?subject=Inquiry:%20Business%20Foundation" class="btn-card">Select Plan</a>
             </div>
 
             <div class="card featured">
-                <div class="contract-tag">Agreement 02 — Recommended</div>
-                <div class="plan-title">The 10X Business Retainer</div>
+                <div class="contract-tag">Recommended Partner</div>
+                <div class="plan-title">Growth Retainer</div>
                 <div class="plan-price">$2,500 <span>/ month</span></div>
-                <p>An ongoing performance contract for business owners committed to continuous growth, optimization, and scaling.</p>
+                <p>An ongoing partnership contract for business owners who want continuous improvements, active management, and steady scaling.</p>
                 <ul class="features-list">
-                    <li>Full-Scale Infrastructure Management</li>
-                    <li>Weekly Optimization & Upgrades</li>
-                    <li>Obsessive Lead Generation Focus</li>
-                    <li>Direct Line to Lead Strategist</li>
-                    <li>Guaranteed Priority Execution Queue</li>
+                    <li>Full Digital Management & Updates</li>
+                    <li>Ongoing Optimization & Enhancements</li>
+                    <li>Regular Strategy & Support Syncs</li>
+                    <li>Priority Turnaround Times</li>
+                    <li>Focused on Steady, Long-Term Growth</li>
                 </ul>
-                <a href="mailto:contact@rapturemediagroup.site?subject=Contract%20Inquiry:%2010X%20Retainer" class="btn-card">Sign Retainer Agreement</a>
+                <a href="mailto:contact@rapturemediagroup.site?subject=Inquiry:%20Growth%20Retainer" class="btn-card">Secure Retainer</a>
             </div>
 
             <div class="card">
-                <div class="contract-tag">Agreement 03</div>
-                <div class="plan-title">Enterprise Monopoly</div>
-                <div class="plan-price">Custom <span>/ valuation</span></div>
-                <p>For established operations ready to aggressively capture market share and completely distance themselves from competitors.</p>
+                <div class="contract-tag">Custom Partnership</div>
+                <div class="plan-title">Enterprise Solution</div>
+                <div class="plan-price">Custom <span>/ project</span></div>
+                <p>Tailored custom builds and complete digital transformations for established businesses looking to expand further.</p>
                 <ul class="features-list">
-                    <li>Total Business & Tech Overhaul</li>
-                    <li>Advanced Funnel & Lead Engineering</li>
-                    <li>Custom CRM Integration</li>
-                    <li>Exclusive Regional Lockout Rights</li>
+                    <li>Comprehensive Custom Architecture</li>
+                    <li>Advanced Features & Integrations</li>
+                    <li>Complete Brand & Asset Alignment</li>
+                    <li>Dedicated Ongoing Support</li>
                 </ul>
-                <a href="mailto:contact@rapturemediagroup.site?subject=Contract%20Inquiry:%20Enterprise" class="btn-card">Request Interview</a>
+                <a href="mailto:contact@rapturemediagroup.site?subject=Inquiry:%20Enterprise%20Solution" class="btn-card">Contact Us</a>
             </div>
         </div>
     </section>
 
-    <section class="section" id="execution">
-        <div class="execution-box">
+    <section class="section" id="contact">
+        <div class="support-box">
             <div class="section-header" style="margin-bottom: 1.5rem;">
-                <h2>The Bottom Line</h2>
-                <p style="color: var(--text-main); font-size: 1.2rem; font-weight: bold; margin-top: 1rem;">"We specialise in making your business better."</p>
+                <h2>Let's Grow Together</h2>
+                <p style="color: var(--text-main); font-size: 1.15rem; font-weight: 600; margin-top: 0.5rem;">"We specialise in making your business better."</p>
             </div>
-            <p style="color: var(--text-muted); margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">Everything we do is focused on driving real results. If your business isn't expanding, you're falling behind. Let's lock in a contract and start building.</p>
-            <a href="#contracts" class="btn">Secure Your Territory</a>
+            <p style="color: var(--text-muted); margin-bottom: 2rem; max-width: 550px; margin-left: auto; margin-right: auto;">Have questions about our plans or ready to discuss how we can help your business reach its goals? Reach out to our team today.</p>
+            <a href="mailto:contact@rapturemediagroup.site" class="btn">Email Our Team</a>
         </div>
     </section>
 
-    <footer id="contact">
-        &copy; 2026 Rapture Media Group. All Rights Reserved. Execution Over Everything.
+    <footer>
+        &copy; 2026 Rapture Media Group. All Rights Reserved. Helping Businesses Grow.
     </footer>
 
 </body>
