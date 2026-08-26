@@ -374,8 +374,8 @@
         /* Scroll Reveal Animation Classes */
         .reveal {
             opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
             will-change: opacity, transform;
         }
 
@@ -518,8 +518,8 @@
         document.addEventListener("DOMContentLoaded", function() {
             const observerOptions = {
                 root: null,
-                rootMargin: '0px',
-                threshold: 0.15
+                rootMargin: '0px 0px -50px 0px',
+                threshold: 0.05
             };
 
             const observer = new IntersectionObserver((entries, observer) => {
@@ -539,19 +539,8 @@
     <!-- Hash Refresh Glitch Fix Script -->
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        if (window.location.hash) {
-          const hash = window.location.hash;
-          
-          // Temporarily remove the hash so the browser doesn't glitch-scroll on load
+        if (window.location.hash === "#" || window.location.hash === "") {
           history.replaceState(null, null, window.location.pathname + window.location.search);
-          
-          // Give the page a brief moment to render fully, then scroll to the section
-          setTimeout(() => {
-            const targetElement = document.querySelector(hash);
-            if (targetElement) {
-              targetElement.scrollIntoView({ behavior: "smooth" });
-            }
-          }, 50);
         }
       });
     </script>
