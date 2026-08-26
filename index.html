@@ -362,6 +362,19 @@
             border-top: 1px solid var(--border-color);
             background-color: var(--bg-white);
         }
+
+        /* --- Scroll Reveal Animation Classes --- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: opacity, transform;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body>
@@ -376,29 +389,31 @@
     </header>
 
     <section class="hero">
-        <div class="badge">Elevate Your Brand. Capture Your Market.</div>
-        <h1>Take Your Business <br><span>To The Next Level</span></h1>
-        <p>No complicated jargon. Just clean websites, great video content, and simple social media management designed to bring local clients straight to your door.</p>
-        <a href="#plans" class="btn">View Simple Pricing Plans</a>
+        <div class="badge reveal">Elevate Your Brand. Capture Your Market.</div>
+        <h1 class="reveal">Take Your Business <br><span>To The Next Level</span></h1>
+        <p class="reveal">No complicated jargon. Just clean websites, great video content, and simple social media management designed to bring local clients straight to your door.</p>
+        <div class="reveal">
+            <a href="#plans" class="btn">View Simple Pricing Plans</a>
+        </div>
     </section>
 
     <section class="value-section" id="about">
         <div class="value-grid">
-            <div class="value-content">
+            <div class="value-content reveal">
                 <h2>Making Online Marketing <span>Simple & Stress-Free</span></h2>
                 <p>Running a local business takes all your time and energy. Trying to figure out websites, videos, and social media on top of that shouldn't be another headache.</p>
                 <p>We take care of the heavy lifting. We build professional websites that look great on phones, produce ready-to-share videos, and manage your online presence so you can focus entirely on your customers.</p>
             </div>
             <div class="steps-list">
-                <div class="step-box">
+                <div class="step-box reveal">
                     <h3>1. We Build Your Online Home</h3>
                     <p>Clean, fast, mobile-friendly websites that instantly show customers who you are and what you offer.</p>
                 </div>
-                <div class="step-box">
+                <div class="step-box reveal">
                     <h3>2. We Create Your Videos & Content</h3>
                     <p>Professional video reels and social media content that capture attention and build trust in your local community.</p>
                 </div>
-                <div class="step-box">
+                <div class="step-box reveal">
                     <h3>3. You Grow Your Business</h3>
                     <p>Consistent online presence working for you 24/7 to bring in new inquiries and repeat clients.</p>
                 </div>
@@ -407,14 +422,14 @@
     </section>
 
     <section class="section" id="plans">
-        <div class="section-header">
+        <div class="section-header reveal">
             <h2>Straightforward Partnership Plans</h2>
             <p>Clear, fixed pricing from one-off website setups to complete monthly management and video production.</p>
         </div>
 
         <div class="pricing-grid">
             <!-- 1. Business Foundation -->
-            <div class="card">
+            <div class="card reveal">
                 <div class="contract-tag">Starter Setup</div>
                 <div class="plan-title">Business Foundation</div>
                 <div class="plan-price">$1,200 <span>/ upfront</span></div>
@@ -429,7 +444,7 @@
             </div>
 
             <!-- 2. Content Creator -->
-            <div class="card">
+            <div class="card reveal">
                 <div class="contract-tag">Video Focused</div>
                 <div class="plan-title">Content Creator</div>
                 <div class="plan-price">$900 <span>/ month</span></div>
@@ -444,7 +459,7 @@
             </div>
 
             <!-- 3. Growth Retainer -->
-            <div class="card featured">
+            <div class="card featured reveal">
                 <div class="contract-tag">Full Partnership</div>
                 <div class="plan-title">Growth Retainer</div>
                 <div class="plan-price">$1,800 <span>/ month</span></div>
@@ -459,7 +474,7 @@
             </div>
 
             <!-- 4. Enterprise Elite -->
-            <div class="card">
+            <div class="card reveal">
                 <div class="contract-tag">Advanced Scale</div>
                 <div class="plan-title">Enterprise Elite</div>
                 <div class="plan-price">$3,200 <span>/ month</span></div>
@@ -476,7 +491,7 @@
     </section>
 
     <section class="section" id="contact" style="padding-top: 0;">
-        <div class="support-box">
+        <div class="support-box reveal">
             <div class="section-header" style="margin-bottom: 1.5rem;">
                 <h2>Let's Grow Your Business Together</h2>
                 <p style="color: var(--text-main); font-size: 1.15rem; font-weight: 700; margin-top: 0.5rem;">"We specialise in making your business better."</p>
@@ -489,6 +504,31 @@
     <footer>
         &copy; 2026 Rapture Media Group. All Rights Reserved. Helping Local Businesses Grow.
     </footer>
+
+    <!-- Scroll Animation Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        // Optional: stop observing once revealed
+                        // observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
 
 </body>
 </html>
