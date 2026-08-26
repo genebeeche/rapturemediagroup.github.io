@@ -37,7 +37,6 @@
             color: var(--text-main);
             line-height: 1.6;
             overflow-x: hidden;
-            /* Subtle background ambient mesh look */
             background-image: radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.03) 0%, transparent 40%),
                               radial-gradient(circle at 90% 80%, rgba(37, 99, 235, 0.03) 0%, transparent 40%);
         }
@@ -70,6 +69,7 @@
 
         nav {
             display: flex;
+            align-items: center;
             gap: 1.75rem;
         }
 
@@ -83,6 +83,25 @@
 
         nav a:hover {
             color: var(--accent);
+        }
+
+        .nav-socials {
+            display: flex;
+            gap: 1rem;
+            margin-left: 0.5rem;
+            padding-left: 1.5rem;
+            border-left: 1px solid var(--border-color);
+        }
+
+        .nav-socials a {
+            color: var(--text-muted);
+            font-size: 1rem;
+            transition: color 0.2s, transform 0.2s;
+        }
+
+        .nav-socials a:hover {
+            color: var(--accent);
+            transform: translateY(-2px);
         }
 
         .hero {
@@ -249,7 +268,6 @@
             margin: 0 auto;
         }
 
-        /* Team Section Specific Styles */
         .story-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -476,7 +494,25 @@
             background-color: var(--bg-white);
         }
 
-        /* Fluid Scroll Reveal Animation Classes */
+        .footer-socials {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .footer-socials a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .footer-socials a:hover {
+            color: var(--accent);
+        }
+
         .reveal {
             opacity: 0;
             transform: translateY(24px);
@@ -487,6 +523,13 @@
         .reveal.active {
             opacity: 1;
             transform: translateY(0);
+        }
+
+        /* Mobile responsiveness adjustments */
+        @media (max-width: 768px) {
+            .nav-socials {
+                display: none; /* Hide top social links on smaller screens to save space */
+            }
         }
     </style>
 </head>
@@ -499,6 +542,13 @@
             <a href="#team">Our Team</a>
             <a href="#plans">Our Plans</a>
             <a href="#contact">Contact</a>
+            
+            <!-- Social links in header -->
+            <div class="nav-socials">
+                <a href="https://facebook.com/YOUR_PAGE" target="_blank" aria-label="Facebook" title="Facebook">FB</a>
+                <a href="https://instagram.com/YOUR_HANDLE" target="_blank" aria-label="Instagram" title="Instagram">IG</a>
+                <a href="https://tiktok.com/@YOUR_HANDLE" target="_blank" aria-label="TikTok" title="TikTok">TT</a>
+            </div>
         </nav>
     </header>
 
@@ -535,7 +585,6 @@
         </div>
     </section>
 
-    <!-- Meet Our Team Section -->
     <section class="section" id="team">
         <div class="section-header reveal">
             <div class="badge">🇦🇺 Rooted in the Border Region</div>
@@ -659,6 +708,11 @@
     </section>
 
     <footer>
+        <div class="footer-socials">
+            <a href="https://facebook.com/YOUR_PAGE" target="_blank">Facebook</a>
+            <a href="https://instagram.com/YOUR_HANDLE" target="_blank">Instagram</a>
+            <a href="https://tiktok.com/@YOUR_HANDLE" target="_blank">TikTok</a>
+        </div>
         &copy; 2026 Rapture Media Group. All Rights Reserved. Proudly Serving Albury and Surrounding Areas.
     </footer>
 
