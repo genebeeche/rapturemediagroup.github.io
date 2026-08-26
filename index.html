@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rapture Media Group | Websites, Videos & Social Media for Local Businesses</title>
+    
+    <!-- Link your custom favicon icon here -->
+    <link rel="icon" type="image/png" href="logo.png">
+
     <style>
         :root {
             --bg-light: #f8fafc;
@@ -70,7 +74,7 @@
             transition: color 0.2s;
         }
 
-        nav a:hover {
+        nav a:hover, nav a.active {
             color: var(--accent);
         }
 
@@ -363,7 +367,7 @@
             background-color: var(--bg-white);
         }
 
-        /* --- Scroll Reveal Animation Classes --- */
+        /* Scroll Reveal Animation Classes */
         .reveal {
             opacity: 0;
             transform: translateY(30px);
@@ -380,9 +384,10 @@
 <body>
 
     <header>
-        <a href="#" class="logo">Rapture <span>Media</span></a>
+        <a href="index.html" class="logo">Rapture <span>Media</span></a>
         <nav>
-            <a href="#about">How We Help</a>
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About Us</a>
             <a href="#plans">Our Plans</a>
             <a href="#contact">Contact</a>
         </nav>
@@ -518,8 +523,6 @@
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('active');
-                        // Optional: stop observing once revealed
-                        // observer.unobserve(entry.target);
                     }
                 });
             }, observerOptions);
