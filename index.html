@@ -81,7 +81,7 @@
             transition: color 0.2s;
         }
 
-        nav a:hover {
+        nav a:hover, nav a.active {
             color: var(--accent);
         }
 
@@ -412,11 +412,11 @@
             background-color: var(--bg-white);
         }
 
-        /* Scroll Reveal Animation Classes */
+        /* Fluid Scroll Reveal Animation Classes */
         .reveal {
             opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+            transform: translateY(24px);
+            transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
             will-change: opacity, transform;
         }
 
@@ -429,9 +429,10 @@
 <body>
 
     <header>
-        <a href="#" class="logo">Rapture <span>Media</span></a>
+        <a href="index.html" class="logo">Rapture <span>Media</span></a>
         <nav>
-            <a href="#about">About Us</a>
+            <a href="index.html" class="active">Home</a>
+            <a href="team.html">Our Team</a>
             <a href="#plans">Our Plans</a>
             <a href="#contact">Contact</a>
         </nav>
