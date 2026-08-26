@@ -535,6 +535,23 @@
             });
         });
     </script>
-
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    if (window.location.hash) {
+      const hash = window.location.hash;
+      
+      // Temporarily remove the hash so the browser doesn't glitch-scroll on load
+      history.replaceState(null, null, window.location.pathname + window.location.search);
+      
+      // Give the page a brief moment to render fully, then scroll to the section
+      setTimeout(() => {
+        const targetElement = document.querySelector(hash);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 50);
+    }
+  });
+</script>
 </body>
 </html>
