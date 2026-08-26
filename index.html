@@ -197,7 +197,7 @@
 
         .section {
             padding: 6rem 6%;
-            max-width: 1300px;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
@@ -221,16 +221,19 @@
             margin: 0 auto;
         }
 
-        .grid-4 {
+        /* Updated to a balanced 2-column grid layout */
+        .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
         .card {
             background-color: var(--bg-white);
             border: 1px solid var(--border-color);
-            padding: 2.5rem 1.8rem;
+            padding: 2.5rem 2rem;
             border-radius: 16px;
             position: relative;
             box-shadow: var(--shadow);
@@ -410,7 +413,7 @@
             <p>Clear, fixed pricing from one-off website setups to complete monthly management and video production.</p>
         </div>
 
-        <div class="grid-4">
+        <div class="pricing-grid">
             <!-- 1. Business Foundation -->
             <div class="card">
                 <div class="contract-tag">Starter Setup</div>
