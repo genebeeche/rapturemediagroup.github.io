@@ -81,7 +81,7 @@
             transition: color 0.2s;
         }
 
-        nav a:hover, nav a.active {
+        nav a:hover {
             color: var(--accent);
         }
 
@@ -247,6 +247,70 @@
             font-size: 1.15rem;
             max-width: 600px;
             margin: 0 auto;
+        }
+
+        /* Team Section Specific Styles */
+        .story-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3.5rem;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+
+        .story-text h2 {
+            font-size: 2.2rem;
+            font-weight: 900;
+            margin-bottom: 1.2rem;
+            letter-spacing: -0.02em;
+            color: var(--text-main);
+            line-height: 1.2;
+        }
+
+        .story-text h2 span {
+            color: var(--accent);
+        }
+
+        .story-text p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 1.2rem;
+            line-height: 1.7;
+        }
+
+        .values-card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .value-card {
+            background-color: var(--bg-white);
+            border: 1px solid var(--border-color);
+            padding: 2.2rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .value-card:hover {
+            border-color: rgba(37, 99, 235, 0.4);
+            transform: translateY(-5px);
+        }
+
+        .value-card h3 {
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 0.75rem;
+            color: var(--text-main);
+        }
+
+        .value-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin: 0;
+            line-height: 1.6;
         }
 
         .pricing-grid {
@@ -429,10 +493,10 @@
 <body>
 
     <header>
-        <a href="index.html" class="logo">Rapture <span>Media</span></a>
+        <a href="#" class="logo">Rapture <span>Media</span></a>
         <nav>
-            <a href="index.html" class="active">Home</a>
-            <a href="team.html">Our Team</a>
+            <a href="#about">About Us</a>
+            <a href="#team">Our Team</a>
             <a href="#plans">Our Plans</a>
             <a href="#contact">Contact</a>
         </nav>
@@ -471,7 +535,50 @@
         </div>
     </section>
 
-    <section class="section" id="plans">
+    <!-- Meet Our Team Section -->
+    <section class="section" id="team">
+        <div class="section-header reveal">
+            <div class="badge">🇦🇺 Rooted in the Border Region</div>
+            <h2>Meet The Team Behind Rapture Media Group</h2>
+            <p>We’re local, we’re passionate, and we genuinely care about seeing Albury and surrounding businesses thrive online.</p>
+        </div>
+
+        <div class="story-grid">
+            <div class="story-text reveal">
+                <h2>Local Faces, Local Passion, <span>Real Results</span></h2>
+                <p>We aren't a faceless agency operating out of a distant capital city. We live, shop, and work right here in the Albury-Wodonga and surrounding regional community.</p>
+                <p>We started Rapture Media Group because we saw too many hardworking local business owners getting burned by complicated jargon, locked into unfair contracts, or paying too much for digital marketing that didn't deliver.</p>
+            </div>
+            <div class="story-text reveal">
+                <div style="background: var(--bg-white); border: 1px solid var(--border-color); padding: 2.5rem; border-radius: 20px; box-shadow: var(--shadow);">
+                    <h3 style="font-size: 1.3rem; font-weight: 900; margin-bottom: 1rem; color: var(--text-main);">Our Local Commitment</h3>
+                    <p style="font-size: 0.95rem; margin-bottom: 1rem;">When you partner with us, you're working directly with people who want your brick-and-mortar storefront or local trade business to succeed.</p>
+                    <p style="font-size: 0.95rem; margin-bottom: 0;">If your community wins, our community wins. That’s why we bring straightforward strategy, clear communication, and absolute integrity to every single project.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-header reveal" style="text-align: center; margin-bottom: 2.5rem; margin-top: 4rem;">
+            <h2 style="font-size: 2rem; font-weight: 900; color: var(--text-main);">The Core Principles We Live By</h2>
+        </div>
+
+        <div class="values-card-grid">
+            <div class="value-card reveal">
+                <h3>🤝 Honest & Transparent</h3>
+                <p>No hidden fees, no smoke and mirrors, and no confusing technical talk. We tell you exactly what we're doing and why it helps your business grow.</p>
+            </div>
+            <div class="value-card reveal">
+                <h3>🛡️ Absolute Integrity</h3>
+                <p>We treat your business and your hard-earned reputation with the highest level of care. If something doesn't make sense for your budget, we'll tell you straight.</p>
+            </div>
+            <div class="value-card reveal">
+                <h3>❤️ Genuine Local Investment</h3>
+                <p>We take pride in seeing local trades, cafes, retail stores, and service providers in the Albury area stand out and attract local customers effortlessly.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="plans" style="padding-top: 0;">
         <div class="section-header reveal">
             <h2>Straightforward Partnership Plans</h2>
             <p>Clear, fixed pricing from one-off website setups to complete monthly management and video production.</p>
@@ -552,7 +659,7 @@
     </section>
 
     <footer>
-        &copy; 2026 Rapture Media Group. All Rights Reserved. Helping Local Businesses Grow.
+        &copy; 2026 Rapture Media Group. All Rights Reserved. Proudly Serving Albury and Surrounding Areas.
     </footer>
 
     <!-- Scroll Animation Script -->
